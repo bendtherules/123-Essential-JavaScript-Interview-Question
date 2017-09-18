@@ -121,7 +121,7 @@ So as recommendation don't go for a private method unless it's necessary.
 [Schedule 15 min discussion with me for free @nishantk](https://www.codementor.io/nihantanu/) 
 
 ## 4.What is “closure” in javascript? Provide an example?
-> A closure is a function defined inside another function (called parent function) and has access to the variable which is declared and defined in parent function scope.
+> A closure is a function defined inside another function (called parent function) and has access to the variable which is declared and defined in parent function scope. The parent function scope is not destroyed even after execution control comes out of the parent function if there is still a reference to the child function.
 
 The closure has access to variable in three scopes:
 - Variable declared in his own scope
@@ -162,6 +162,26 @@ innerArg = 5
 innerFuncVar = y
 globalVar = abc
 ```
+
+Another example:
+
+```javascript
+function outer(x){
+	var someValue = x;
+
+	function inner(){
+		console.log(someValue);
+	}
+
+	return inner;
+}
+
+var innerClosure = outer(10);
+// Here, `outer` function execution has finished 
+
+innerClosure(); // Output: 10
+```
+When `outer` function execution has finished, normally its scope (including `var someValue`) would also be destroyed. But `innerClosure` has reference to the `inner` function which is returned from the `outer` function. Hence, the scope of `outer` is retained and is only accessible inside `inner`.
 
 ## Have doubt in this question ??
 [Schedule 15 min discussion with me for free @nishantk](https://www.codementor.io/nihantanu/) 
