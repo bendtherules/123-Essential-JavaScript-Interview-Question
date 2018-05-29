@@ -1,4 +1,4 @@
-![](coverPage.png)
+ ![](coverPage.png)
 
 ## This Book will be completed by Sept 1 2017 and available to buy. If you want me to sent early copy of this book then please add your name and email address in google form here [Google Form](http://goo.gl/forms/QSpxVtvsNb).
 
